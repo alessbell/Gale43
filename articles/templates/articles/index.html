@@ -3,11 +3,11 @@
 <link rel="stylesheet" type="text/css" href="{% static 'articles/style.css' %}" />
 
 {% if latest_article_list %}
-    <ul>
+
     {% for article in latest_article_list %}
-        <li><a href="/articles/{{ article.id }}/">{{ article.title }}</a></li>
+        <h1><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h1>
+        <p>{{ article.body }}</p>
     {% endfor %}
-    </ul>
 {% else %}
     <p>No articles are available.</p>
 {% endif %}

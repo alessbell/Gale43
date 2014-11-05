@@ -816,3 +816,8 @@ footer.new {
   padding-left: 1em !important;
   color:white !important;
 }
+
+
+.section {
+  @include outer-container;
+}

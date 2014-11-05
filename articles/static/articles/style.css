@@ -857,3 +857,12 @@ footer.new {
   padding-right: 0 !important;
   padding-left: 1em !important;
   color: white !important; }
+
+.section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .section:after {
+    content: "";
+    display: table;
+    clear: both; }
