@@ -1,0 +1,13 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'articles/style.css' %}" />
+
+<h1>{{ article.title }}</h1>
+
+    <ul>
+
+        <li><a href="/articles/{{ article.id }}/">{{ article.author }}</a></li>
+        <img src="{{article.hero_image.url}}">
+        <img src="{{article.additional_image.url}}">
+
+    </ul>
