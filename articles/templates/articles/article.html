@@ -1,11 +1,21 @@
-{% load staticfiles %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'articles/style.css' %}" />
+{% include 'articles/_header.html' %}
 
 <div class="section">
+  <div class="side-nav">
+    <ul>
+      <li><img src="{{article.hero_image.url}}"></li>
+      <li><img src="{{article.hero_image.url}}"></li>
+      <li><img src="{{article.hero_image.url}}"></li>
+    </ul>
+  </div>
+
+  <div class="article-main">
   <h1>{{ article.title }}</h1>
-    <li><a href="/articles/{{ article.id }}/">{{ article.author }}</a></li>
+    {{ article.pub_date }}  |  <a href="/articles/{{ article.id }}/">{{ article.author }}</a>
     <p>{{ article.body }}</p>
     <img src="{{article.hero_image.url}}">
     <img src="{{article.additional_image.url}}">
+  </div>
 </div>
+
+{% include 'articles/_footer.html' %}

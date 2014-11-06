@@ -1,13 +1,25 @@
-{% load staticfiles %}
+{% include 'articles/_header.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'articles/style.css' %}" />
+<div class="section">
+  <div class="side-nav">
+    <ul>
+      <li>hello</li>
+      <li>there</li>
+      <li>sup</li>
+    </ul>
+  </div>
 
-{% if latest_article_list %}
+  <div class="article-main">
+  {% if latest_article_list %}
 
-    {% for article in latest_article_list %}
-        <h1><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h1>
-        <p>{{ article.body }}</p>
-    {% endfor %}
-{% else %}
-    <p>No articles are available.</p>
-{% endif %}
+      {% for article in latest_article_list %}
+          <h1><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h1>
+          <p>{{ article.body }}</p>
+      {% endfor %}
+  {% else %}
+      <p>No articles are available.</p>
+  {% endif %}
+  </div>
+</div>
+
+{% include 'articles/_footer.html' %}
