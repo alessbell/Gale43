@@ -1,13 +1,7 @@
 {% include 'articles/_header.html' %}
 
 <div class="section">
-  <div class="side-nav">
-    <ul>
-      <li><img src="{{article.hero_image.url}}"></li>
-      <li><img src="{{article.hero_image.url}}"></li>
-      <li><img src="{{article.hero_image.url}}"></li>
-    </ul>
-  </div>
+  {% include 'articles/_side_nav.html' %}
 
   <div class="article-main">
   <h1>{{ article.title }}</h1>

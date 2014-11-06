@@ -23,6 +23,8 @@ html, body {
 
 .side-nav {
   @include span-columns(3);
+  border:1px solid black;
+  padding: 1em 1em 1em 1em;
 }
 
 .footer {
@@ -104,11 +106,11 @@ html, body {
 
 .centered-navigation {
   $centered-navigation-padding: 1em;
-  $centered-navigation-logo-height: 2em;
+  $centered-navigation-logo-height: 6em;
   $centered-navigation-background: #E7F1EC;
   $centered-navigation-color: transparentize($base-font-color, 0.3);
   $centered-navigation-color-hover: $base-font-color;
-  $centered-navigation-height: 60px;
+  $centered-navigation-height: 100px;
   $centered-navigation-item-padding: 1em;
   $centered-navigation-submenu-padding: 1em;
   $centered-navigation-submenu-width: 12em;
@@ -133,7 +135,7 @@ html, body {
 
     img {
       max-height: $centered-navigation-height;
-      opacity: .6;
+      opacity: 1;
       padding: .8em 0;
     }
 
@@ -238,9 +240,9 @@ html, body {
   }
 
   .logo img {
-    margin-bottom: -$centered-navigation-logo-height / 3;
-    max-height: $centered-navigation-logo-height;
-    opacity: .6;
+    margin-bottom: -5.3em;
+    max-height: 5em;
+    opacity: 1;
   }
 
 
