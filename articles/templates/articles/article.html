@@ -1,5 +1,4 @@
 {% include 'articles/_header.html' %}
-{% load article_extras %}
 
 <div class="section">
   {% include 'articles/_side_nav.html' %}
@@ -11,7 +10,7 @@
     <p>{{ article.body }}</p>
     <div class="article-image"><img class="secondary-image" src="{{article.additional_image.url}}"></div>
   </div>
-  <div class="article-main">
+  <div class="article-page-right">
     {% include 'articles/show_articles.html' %}
 
   </div>

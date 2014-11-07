@@ -1,9 +1,13 @@
+{% load staticfiles %}
 <div class="side-nav">
   <ul>
     <div class="hamburger-search">
+      <img class="Alessia-logo" src="{% static 'articles/2.png' %}" alt="Logo image">
+    </div>
+    <div class="hamburger-search">
       <a href="#"><i class="fa fa-reorder"></i></a> | <a href="#"><i class="fa fa-search" ></i></a>
     </div>
-    <div class="nav-item"><li><a href="#"><i class="fa fa-edit"></i></a></li>New Post</div>
+    <div class="nav-item"><li><a href="/articles"><i class="fa fa-home"></i></a></li>Home</div>
     <div class="nav-item"><li><a href="#"><i class="fa fa-inbox"></i></a></li>Posts</div>
     <div class="nav-item"><li><a href="#"><i class="fa fa-folder-open"></i></a></li>Drafts</div>
     <div class="nav-item"><li><a href="#"><i class="fa fa-cog"></i></a></li>Settings</div>

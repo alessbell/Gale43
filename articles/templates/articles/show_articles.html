@@ -1,7 +1,15 @@
-{% load staticfiles %}
-<div class="read-next"><h2>What to Read Next</h2></div>
+<div class="read-next"><div class="header"><h2>What to Read Next</h2></div>
+  <div class="icons">
+    <a href="#"><i class="fa fa-angle-right"></i>
+    <a href="#"><i class="fa fa-angle-left"></i>
+  </div>
+</div>
 
 {% for article in articles %}
-  <div class="read-next-image"><a href="/articles/{{ article.id }}/"><img class="read-next-absolute" src="{{article.hero_image.url}}"></a></div>
-  <h2>{{ article.title }}</h2>
+<div class="read-next-container">
+  <div class="read-next-image">
+    <a href="/articles/{{ article.id }}/"><img class="read-next-absolute" src="{{article.hero_image.url}}"></a>
+    </div>
+    <div class="article-caption"><a href="/articles/{{ article.id }}/">{{ article.title }}</a></div>
+</div>
 {% endfor %}

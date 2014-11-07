@@ -28,10 +28,45 @@ html, body {
   }
 }
 
+.Alessia-logo {
+  padding: 0.6em 0.5em 0.6em 0.5em;
+}
+
+.article-caption {
+  text-align:center;
+  font-size:15px;
+  margin-bottom:1em;
+}
+
+.read-next-container {
+  width:24.7%;
+  display:inline-table;
+}
+
+.icons i:first-child {
+  margin-left:0.5em;
+}
+
 .article-page {
   @include span-columns(10.5);
   @include omega();
   margin-top:2em;
+  img {
+    margin-top:1em;
+  }
+  p {
+    margin-top:1em;
+    width: 65%;
+    float:left;
+    padding-right: 2em;
+  }
+}
+
+.article-page-right {
+  @include span-columns(10.5);
+  @include omega();
+  margin-top:2em;
+  float:right;
   img {
     margin-top:1em;
   }
@@ -56,15 +91,14 @@ img.secondary-image {
 }
 
 .read-next-image {
-  width: 23%;
+  width: 100%;
   margin-top: 0;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   overflow: hidden;
   position: relative;
   height: 213px;
   float: left;
   margin-right:0.5em;
-  margin-left:0.6em;
 }
 
 img.read-next-absolute {
@@ -126,6 +160,26 @@ img.absolute {
 .read-next {
   border-bottom: 1px solid grey;
   border-top: 1px solid grey;
+  height:50px;
+
+  i {
+    float:right;
+    font-size: -webkit-xxx-large;
+  }
+}
+
+.header {
+  float:left;
+  width:800px;
+
+  h2 {
+    margin-top:3px;
+  }
+}
+
+.icons {
+  float:right;
+  width:100px;
 }
 
 .numberCircle {
