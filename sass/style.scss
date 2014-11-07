@@ -17,7 +17,7 @@ html, body {
 }
 
 .article-main {
-  @include span-columns(9);
+  @include span-columns(10.5);
   @include omega();
   margin-top:2em;
   img {
@@ -28,11 +28,92 @@ html, body {
   }
 }
 
-.side-nav {
-  @include span-columns(3);
-  border:1px solid black;
-  padding: 1em 1em 1em 1em;
+.article-page {
+  @include span-columns(10.5);
+  @include omega();
   margin-top:2em;
+  img {
+    margin-top:1em;
+  }
+  p {
+    margin-top:1em;
+    width: 65%;
+    float:left;
+    padding-right: 2em;
+  }
+}
+
+.article-image {
+  width: 35%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+img.secondary-image {
+  position:absolute;
+}
+
+.read-next-image {
+  width: 23%;
+  margin-top: 0;
+  margin-bottom: 3em;
+  overflow: hidden;
+  position: relative;
+  height: 213px;
+  float: left;
+  margin-right:0.5em;
+  margin-left:0.6em;
+}
+
+img.read-next-absolute {
+  position:absolute;
+  max-width:157%;
+  right: -3em;
+}
+
+.featured-article {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height:443px;
+}
+
+img.absolute {
+  position:absolute;
+}
+
+
+.side-nav {
+  @include span-columns(1.5);
+  border:1px solid grey;
+  margin-top:2em;
+  text-align:center;
+
+  li {
+    font-size:2em;
+  }
+
+  .nav-item {
+    margin-bottom:1em;
+    margin-top:1em;
+  }
+
+  .fa-reorder {
+    margin-right:1em;
+    margin-top:1em;
+    margin-bottom:1em;
+  }
+
+  .fa-search {
+    margin-left:1em;
+  }
+
+  .hamburger-search {
+    border-bottom: 1px solid grey;
+  }
 }
 
 .articles-list {
@@ -42,12 +123,17 @@ html, body {
   margin-top:1em;
 }
 
+.read-next {
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+}
+
 .numberCircle {
     border-radius: 50%;
 
     width: 60px;
     height: 60px;
-    padding: 5px;
+    padding: 1px;
 
     background: #fff;
     border: 1px solid #666;
@@ -55,8 +141,8 @@ html, body {
     text-align: center;
 
     font-size: 32px;
-    margin-top:3em;
-    margin-bottom:6.4em;
+    margin-top:1.1em;
+    margin-bottom:6.2em;
 }
 
 .footer {

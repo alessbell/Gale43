@@ -1,0 +1,5 @@
+<div class="read-next"><h2>What to Read Next</h2></div>
+
+{% for article in latest_article_list %}
+  <div class="read-next-image"><a href="/articles/{{ article.id }}/"><img class="read-next-absolute" src="{{article.hero_image.url}}"></a></div>
+{% endfor %}

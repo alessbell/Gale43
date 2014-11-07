@@ -1,38 +1,35 @@
 {% include 'articles/_header.html' %}
 
 <div class="section">
-  <div class="side-nav">
-    <ul>
-      <li>hello</li>
-      <li>there</li>
-      <li>sup</li>
-    </ul>
-  </div>
+  {% include 'articles/_side_nav.html' %}
 
   <div class="article-main">
   {% if latest_article_list %}
     {% for article in latest_article_list %}
       {% if forloop.first %}
-        <h1><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h1>
-        {{ article.pub_date }}  |  <a href="/articles/{{ article.id }}/">{{ article.author }}</a>
-        <img src="{{article.hero_image.url}}">
-        <p>{{ article.body|truncatechars:700 }}</p>
+
+          <h2><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h2>
+          {{ article.pub_date }}  |  <a href="/articles/{{ article.id }}/">{{ article.author }}</a>
+          <div class="featured-article"><img class="absolute" src="{{article.hero_image.url}}"></div>
+          <p>{{ article.body|truncatechars:700 }}</p>
+
       {% else %}
       <div class="articles-list">
-        <h1><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h1>
-        <p>{{ article.body|truncatechars:500 }}</p>
+        <h2><a href="/articles/{{ article.id }}/">{{ article.title }}</a></h2>
+        {{ article.pub_date }}  |  {{ article.author }}
+        <p>{{ article.body|truncatechars:400 }}</p>
         <p><a href="/articles/{{ article.id }}/">Read more...</a></p>
       </div>
       {% endif %}
     {% endfor %}
-      <div class="numbers">
         <div class="numberCircle">1</div>
         <div class="numberCircle">2</div>
         <div class="numberCircle">3</div>
-      </div>
   {% else %}
       <p>No articles are available!</p>
   {% endif %}
+
+  {% include 'articles/_read_next.html' %}
   </div>
 </div>
 

@@ -1,14 +1,19 @@
 {% include 'articles/_header.html' %}
+{% load article_extras %}
 
 <div class="section">
   {% include 'articles/_side_nav.html' %}
 
-  <div class="article-main">
-    <h1>{{ article.title }}</h1>
+  <div class="article-page">
+    <h2>{{ article.title }}</h2>
     {{ article.pub_date }}  |  <a href="/articles/{{ article.id }}/">{{ article.author }}</a>
     <img src="{{article.hero_image.url}}">
     <p>{{ article.body }}</p>
-    <img src="{{article.additional_image.url}}">
+    <div class="article-image"><img class="secondary-image" src="{{article.additional_image.url}}"></div>
+  </div>
+  <div class="article-main">
+    {% include 'articles/_read_next.html' %}
+
   </div>
 </div>
 
