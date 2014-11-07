@@ -19,7 +19,7 @@ def detail(request, article_id):
     raise Http404
   return render(request, 'articles/article.html', {'article':article})
 
-def show_articles(request):
-  latest_article_list = Article.objects.order_by('-pub_date')[:5]
-  context = {'latest_article_list': latest_article_list}
-  return render(request, 'articles/_read_next.html', context)
+def show_articles(request, article_id):
+  article_list = Article.objects.order_by('-pub_date')[:5]
+  context = {'article_list': article_list}
+  return render(request, 'articles/show_articles.html', context)
