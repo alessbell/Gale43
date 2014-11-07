@@ -19,12 +19,44 @@ html, body {
 .article-main {
   @include span-columns(9);
   @include omega();
+  margin-top:2em;
+  img {
+    margin-top:1em;
+  }
+  p {
+    margin-top:1em;
+  }
 }
 
 .side-nav {
   @include span-columns(3);
   border:1px solid black;
   padding: 1em 1em 1em 1em;
+  margin-top:2em;
+}
+
+.articles-list {
+  width:90%;
+  float:right;
+  margin-bottom:1em;
+  margin-top:1em;
+}
+
+.numberCircle {
+    border-radius: 50%;
+
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+
+    background: #fff;
+    border: 1px solid #666;
+    color: #666;
+    text-align: center;
+
+    font-size: 32px;
+    margin-top:3em;
+    margin-bottom:6.4em;
 }
 
 .footer {

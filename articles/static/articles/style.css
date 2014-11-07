@@ -221,9 +221,14 @@ html, body {
   display: block;
   margin-right: 2.3576515979%;
   width: 74.4105871005%;
-  margin-right: 0; }
+  margin-right: 0;
+  margin-top: 2em; }
   .article-main:last-child {
     margin-right: 0; }
+  .article-main img {
+    margin-top: 1em; }
+  .article-main p {
+    margin-top: 1em; }
 
 .side-nav {
   float: left;
@@ -231,9 +236,29 @@ html, body {
   margin-right: 2.3576515979%;
   width: 23.2317613015%;
   border: 1px solid black;
-  padding: 1em 1em 1em 1em; }
+  padding: 1em 1em 1em 1em;
+  margin-top: 2em; }
   .side-nav:last-child {
     margin-right: 0; }
+
+.articles-list {
+  width: 90%;
+  float: right;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
+.numberCircle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #666;
+  color: #666;
+  text-align: center;
+  font-size: 32px;
+  margin-top: 3em;
+  margin-bottom: 6.4em; }
 
 .footer {
   background: #2f5860;

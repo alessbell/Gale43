@@ -4,10 +4,10 @@
   {% include 'articles/_side_nav.html' %}
 
   <div class="article-main">
-  <h1>{{ article.title }}</h1>
+    <h1>{{ article.title }}</h1>
     {{ article.pub_date }}  |  <a href="/articles/{{ article.id }}/">{{ article.author }}</a>
-    <p>{{ article.body }}</p>
     <img src="{{article.hero_image.url}}">
+    <p>{{ article.body }}</p>
     <img src="{{article.additional_image.url}}">
   </div>
 </div>
